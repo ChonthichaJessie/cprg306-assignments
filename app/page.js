@@ -45,5 +45,4 @@ const Assignment = styled.div`
   flex-direction: column;
   color: white;
   margin-left: 30px;
-
 `;
