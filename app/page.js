@@ -1,21 +1,22 @@
 "use client";
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 const Home = () => {
   return (
     <Wrapper>
       <Heading>CPRG 306: Web Development 2 - Assignments</Heading>
       <Assignment>
-        <a href="./week-2">Week 2 Assignment</a>
-        <a>Week 3 Assignment</a>
-        <a>Week 4 Assignment</a>
-        <a>Week 5 Assignment</a>
-        <a>Week 6 Assignment</a>
-        <a>Week 7 Assignment</a>
-        <a>Week 8 Assignment</a>
-        <a>Week 9 Assignment</a>
-        <a>Week 10 Assignment</a>
+        <Link href="./week-2">Week 2 Assignment</Link>
+        <Link href="">Week 3 Assignment</Link>
+        <Link href="">Week 4 Assignment</Link>
+        <Link href="">Week 5 Assignment</Link>
+        <Link href="">Week 6 Assignment</Link>
+        <Link href="">Week 7 Assignment</Link>
+        <Link href="">Week 8 Assignment</Link>
+        <Link href="">Week 9 Assignment</Link>
+        <Link href="">Week 10 Assignment</Link>
       </Assignment>
     </Wrapper>
   );
