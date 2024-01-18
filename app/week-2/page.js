@@ -1,26 +1,15 @@
 "use client";
 import React from "react";
-import styled from "styled-components";
 import StudentInfo from "./student-info";
 
 const Page = () => {
   return (
-    <Wrapper>
-      <Heading>Shopping List</Heading>
+    <div class="bg-black h-screen">
+      <h1 class="text-white">Shopping List</h1>
       <StudentInfo />
-    </Wrapper>
+    </div>
   );
 };
 
 export default Page;
-
-const Heading = styled.h1`
-  color: white;
-`;
-
-const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vW;
-  background-color: black
-  `;
 

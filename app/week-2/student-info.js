@@ -1,11 +1,11 @@
 import React from "react";
-import styled from "styled-components";
+import Link from "next/link";
 
 const StudentInfo = () => {
   return (
     <>
-      <Heading>Jessie Chonthicha</Heading>
-      <Link href="https://github.com/ChonthichaJessie/cprg306-assignments.git">
+      <h1 class="text-white">Jessie Chonthicha</h1>
+      <Link class="text-white" href="https://github.com/ChonthichaJessie/cprg306-assignments.git">
         Github link
       </Link>
     </>
@@ -13,11 +13,3 @@ const StudentInfo = () => {
 };
 
 export default StudentInfo;
-
-const Heading = styled.h1`
-  color: white;
-`;
-
-const Link = styled.a`
-  color: white;
-`;
