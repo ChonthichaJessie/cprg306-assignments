@@ -5,8 +5,8 @@ const Page = () => {
     
 
     return (
-        <main>
-            <h1>Shopping List</h1>
+        <main class="bg-slate-950 md:flex flex-col ">
+            <h1 class="text-3xl font-bold m-2 text-white">Shopping List</h1>
             <ItemList/>
         </main>
 

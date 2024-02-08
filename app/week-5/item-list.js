@@ -4,9 +4,12 @@ import { useState } from "react";
 import allItems from "./items.json";
 import GroupedItems from "./groupedItems";
 
-const sortByName = (a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0);
-const sortByCategory = (a, b) =>
-  a.category < b.category ? -1 : a.category > b.category ? 1 : 0;
+const sortByName = (a, b) => {
+  a.name < b.name;
+};
+const sortByCategory = (a, b) => {
+  a.category < b.category;
+};
 const groupByCategory = () => {
   const groupedData = {};
   const allItemsForGrouping = [...allItems];
@@ -39,33 +42,31 @@ const ItemList = () => {
 
   return (
     <div>
-      <button
-        class="bg-pink-400 hover:bg-pink-500 active:bg-pink-400 text-white font-bold py-2 px-4 rounded-lg mt-2 mb-2"
-        onClick={sortByName}
-      >
-        Sort by Name
-      </button>
-      <button
-        class="bg-pink-400 hover:bg-pink-500 active:bg-pink-400 text-white font-bold py-2 px-4 rounded-lg mt-2 mb-2"
-        onClick={sortByCategory}
-      >
-        Sort by Category
-      </button>
-      <button
-        class="bg-pink-400 hover:bg-pink-500 active:bg-pink-400 text-white font-bold py-2 px-4 rounded-lg mt-2 mb-2"
-        onClick={() => setGroups(true)}
-      >
-        Group by Category
-      </button>
+      <div class ="md:flex items-center">
+        <h1 class="text-white font-bold m-2" >Sort by: </h1>
+        <button
+          class="bg-pink-400 hover:bg-pink-500 active:bg-pink-400 text-white font-bold py-2 px-4 rounded-lg mt-2 mb-2 mr-2"
+          onClick={sortByName}
+        >
+          Sort by Name
+        </button>
+        <button
+          class="bg-pink-400 hover:bg-pink-500 active:bg-pink-400 text-white font-bold py-2 px-4 rounded-lg mt-2 mb-2 mr-2"
+          onClick={sortByCategory}
+        >
+          Sort by Category
+        </button>
+        <button
+          class="bg-pink-400 hover:bg-pink-500 active:bg-pink-400 text-white font-bold py-2 px-4 rounded-lg mt-2 mb-2"
+          onClick={() => setGroups(true)}
+        >
+          Group by Category
+        </button>
+      </div>
       {groups
         ? sortedGroupNames.map((category) => {
             const items = allItemsByGroup[category];
-            return (
-              <GroupedItems
-                category={category}
-                items={items}
-              />
-            );
+            return <GroupedItems category={category} items={items} />;
           })
         : items.map((item) => {
             return (
@@ -80,5 +81,4 @@ const ItemList = () => {
   );
 };
 
-
-export default ItemList 
+export default ItemList;
