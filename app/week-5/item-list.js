@@ -5,10 +5,22 @@ import allItems from "./items.json";
 import GroupedItems from "./groupedItems";
 
 const sortByName = (a, b) => {
-  a.name < b.name;
+  if (a.name > b.name) {
+    return 1;
+  }
+  if (a.name < b.name) {
+    return -1;
+  }
+  return 0;
 };
 const sortByCategory = (a, b) => {
-  a.category < b.category;
+  if (a.category > b.category) {
+    return 1;
+  }
+  if (a.category < b.category) {
+    return -1;
+  }
+  return 0;
 };
 const groupByCategory = () => {
   const groupedData = {};
@@ -42,8 +54,8 @@ const ItemList = () => {
 
   return (
     <div>
-      <div class ="md:flex items-center">
-        <h1 class="text-white font-bold m-2" >Sort by: </h1>
+      <div class="md:flex items-center">
+        <h1 class="text-white font-bold m-2">Sort by: </h1>
         <button
           class="bg-pink-400 hover:bg-pink-500 active:bg-pink-400 text-white font-bold py-2 px-4 rounded-lg mt-2 mb-2 mr-2"
           onClick={sortByName}
