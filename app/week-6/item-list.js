@@ -3,19 +3,19 @@ import Item from "./item";
 import { useMemo, useState } from "react";
 
 const sortByName = (a, b) => {
-  if (a.name > b.name) {
+  if (a.name.toLowerCase() > b.name.toLowerCase()) {
     return 1;
   }
-  if (a.name < b.name) {
+  if (a.name.toLowerCase() < b.name.toLowerCase()) {
     return -1;
   }
   return 0;
 };
 const sortByCategory = (a, b) => {
-  if (a.category > b.category) {
+  if (a.category.toLowerCase() > b.category.toLowerCase()) {
     return 1;
   }
-  if (a.category < b.category) {
+  if (a.category.toLowerCase() < b.category.toLowerCase()) {
     return -1;
   }
   return 0;

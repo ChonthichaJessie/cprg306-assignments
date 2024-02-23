@@ -5,19 +5,19 @@ import allItems from "./items.json";
 import GroupedItems from "./groupedItems";
 
 const sortByName = (a, b) => {
-  if (a.name > b.name) {
+  if (a.name.toLowerCase() > b.name.toLowerCase()) {
     return 1;
   }
-  if (a.name < b.name) {
+  if (a.name.toLowerCase() < b.name.toLowerCase()) {
     return -1;
   }
   return 0;
 };
 const sortByCategory = (a, b) => {
-  if (a.category > b.category) {
+  if (a.category.toLowerCase() > b.category.toLowerCase()) {
     return 1;
   }
-  if (a.category < b.category) {
+  if (a.category.toLowerCase() < b.category.toLowerCase()) {
     return -1;
   }
   return 0;
