@@ -4,7 +4,7 @@ import ItemList from "./item-list";
 import NewItem from "./new-item";
 import itemsData from "./items.json";
 import { useState } from "react";
-import MealIdeas from "./meal-ideas";
+import MealsIdeas from "./mealsIdeas";
 
 const cleanName = (name) => {
   return name
@@ -19,7 +19,7 @@ const cleanName = (name) => {
 
 const Page = () => {
   const [items, setItems] = useState(itemsData);
-  const [selectedItem, setSelectedItem] = useState("");
+  const [selectItem, setSelectItem] = useState("");
 
   const handleAddItem = (item) => {
     alert(`Added item ${item.name} ${item.quantity} ${item.category}`);
@@ -34,14 +34,12 @@ const Page = () => {
         <NewItem onSubmit={handleAddItem} />
         <ItemList
           items={items}
-          onSelectItem={setSelectedItem}
-          selectedItem={selectedItem}
+          onSelectItem={setSelectItem}
+          slectedItem={selectItem}
         />
       </div>
       <div>
-        <MealIdeas
-          ingredient={selectedItem ? cleanName(selectedItem.name) : undefined}
-        />
+        <MealsIdeas selectedItem={cleanName(selectItem)} />
       </div>
     </main>
   );

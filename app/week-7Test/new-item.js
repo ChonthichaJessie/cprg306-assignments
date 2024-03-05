@@ -33,9 +33,9 @@ const NewItem = ({onSubmit}) => {
         placeholder="Item name"
         onChange={(e) => setName(e.target.value)}
         required
-        class="border-2 border-pink-200 rounded-lg py-2 px-4 mt-2 text-black"
+        class="border-2 border-pink-200 rounded-lg py-2 px-4 mt-2"
       />
-      <div class="flex flex-row justify-between mt-2 text-black">
+      <div class="flex flex-row justify-between mt-2">
         <input
           type="number"
           min={1}
